@@ -169,7 +169,7 @@ const projects = [
     link: "https://thepanel.com.ng",
     description:
       "Built a central conference platform that solved fragmented event communication, manual registration stress, and poor attendee engagement. Unified registration, payment routing, live webinar/game experiences, and admin tools into one scalable flow.",
-    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1400&q=80",
+    image: "images/thepanel.png",
     stacks: ["ReactJS", "Tailwind CSS", "React Router", "Vite", "ExpressJS", "MySQL", "Sequelize", "JWT"]
   },
   {
@@ -177,7 +177,7 @@ const projects = [
     link: "https://ultimateyp.com.ng",
     description:
       "Created an interactive platform that solved low audience participation during live sessions. Enabled real-time quizzes, polls, raffles, Zoom-linked engagement, and leaderboard mechanics that drive retention, competition, and measurable activity.",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1400&q=80",
+    image: "images/ultimateyp.png",
     stacks: ["ReactJS", "Tailwind CSS", "Vite", "Framer Motion", "ExpressJS", "MySQL", "Sequelize", "Redis"]
   },
   {
@@ -185,7 +185,7 @@ const projects = [
     link: "https://pharmacademy.com.ng",
     description:
       "Delivered a structured learning hub for pharmacy professionals to solve access-to-training and continuous development gaps. Organized course discovery, LMS-based learning flow, and easier access to practical, relevant industry knowledge.",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1400&q=80",
+    image: "images/pharmacademy.png",
     stacks: ["WordPress", "PHP", "MySQL", "Elementor", "LearnPress", "Custom CSS"]
   },
   {
@@ -193,7 +193,7 @@ const projects = [
     link: "https://pharmalliance.com.ng",
     description:
       "Built a business-network digital presence that solved weak visibility of shared value and member resources. Improved trust, discoverability, and conversion through clearer value positioning, resource access, and structured brand storytelling.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80",
+    image: "images/pharmalliance.png",
     stacks: ["WordPress", "PHP", "MySQL", "Elementor", "Custom CSS", "SEO"]
   },
   {
@@ -201,7 +201,7 @@ const projects = [
     link: "https://oyettyspecialfoundation.com/",
     description:
       "Designed a nonprofit platform that solved low awareness and weak support coordination for parents of special children. Improved donation pathways, volunteer discovery, and impact communication through structured storytelling and outreach pages.",
-    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1400&q=80",
+    image: "images/oyetty.png",
     stacks: ["WordPress", "PHP", "MySQL", "Elementor", "Blog CMS", "Responsive Design"]
   },
   {
@@ -209,7 +209,7 @@ const projects = [
     link: "https://moxie.ng/",
     description:
       "Developed a health brand site that solved poor product education and weak parent-focused conversion flow. Combined product visibility, continuous health education content, and action-driven CTAs to improve trust and buying intent.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80",
+    image: "images/moxie.png",
     stacks: ["WordPress", "PHP", "MySQL", "Elementor", "WooCommerce", "Content Marketing"]
   },
   {
@@ -217,7 +217,7 @@ const projects = [
     link: "https://laptopaffairs.com.ng",
     description:
       "Built a retail/support-focused web presence that solved unclear product access and slow customer inquiry handling. Improved discoverability of offerings, repair/service trust signals, and faster lead capture for purchase decisions.",
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1400&q=80",
+    image: "images/laptopaffairs.png",
     stacks: ["WordPress", "PHP", "MySQL", "Elementor", "E-commerce", "Responsive Design"]
   },
   {
@@ -225,7 +225,7 @@ const projects = [
     link: "https://fontcarepharmacy.com.ng",
     description:
       "Created a community pharmacy experience that solved limited digital access to trusted pharmaceutical guidance. Made services, consultation touchpoints, and care information easier to reach for both local and online customers.",
-    image: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1400&q=80",
+    image: "images/fontcare.png",
     stacks: ["WordPress", "PHP", "MySQL", "Elementor", "Custom CSS", "SEO"]
   },
   {
@@ -233,7 +233,7 @@ const projects = [
     link: "https://rebeca.pharmalliance.com.ng/",
     description:
       "Built a business calculator tool that solved guesswork in pharmacy profitability planning. Enabled operators to model expenses, break-even targets, and required sales output so decisions become data-backed instead of intuitive.",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80",
+    image: "images/rebeca.png",
     stacks: ["JavaScript", "WordPress", "PHP", "MySQL", "Calculator Logic", "Responsive UI"]
   }
 ];
@@ -294,9 +294,9 @@ function App() {
             isMenuOpen ? "max-h-72 py-4" : "max-h-0 py-0"
           }`}
         >
-          <div className="mx-auto w-full max-w-xs rounded-2xl border border-zinc-200 bg-zinc-50 p-3 shadow-sm">
+          <div className="mx-auto w-full max-w-xs rounded-2xl border border-zinc-200 bg-zinc-50 p-8 shadow-sm">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80"
+              src="images/profile.png"
               alt="Profile preview"
               className="h-56 w-full rounded-xl object-cover"
             />
@@ -309,7 +309,7 @@ function App() {
         <section id="home" className="mx-1 pt-0 pb-16 md:-mx-8 md:mx-0 md:pb-20">
           <div className="hero-shell text-center">
             <img
-              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1800&q=80"
+              src="images/bg-hero.png"
               alt="Hero background"
               className="hero-bg-image"
             />
