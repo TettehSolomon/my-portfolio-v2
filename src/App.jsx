@@ -202,7 +202,7 @@ const projects = [
     description:
       "Designed a nonprofit platform that solved low awareness and weak support coordination for parents of special children. Improved donation pathways, volunteer discovery, and impact communication through structured storytelling and outreach pages.",
     image: "images/oyetty.png",
-    stacks: ["WordPress", "PHP", "MySQL", "Elementor", "Blog CMS", "Responsive Design"]
+    stacks: ["WordPress", "PHP", "MySQL", "Elementor", "Responsive Design"]
   },
   {
     title: "Moxie",
@@ -210,7 +210,7 @@ const projects = [
     description:
       "Developed a health brand site that solved poor product education and weak parent-focused conversion flow. Combined product visibility, continuous health education content, and action-driven CTAs to improve trust and buying intent.",
     image: "images/moxie.png",
-    stacks: ["WordPress", "PHP", "MySQL", "Elementor", "WooCommerce", "Content Marketing"]
+    stacks: ["WordPress", "MySQL", "Elementor", "WooCommerce", "Content Marketing"]
   },
   {
     title: "Laptop Affairs",
@@ -218,7 +218,7 @@ const projects = [
     description:
       "Built a retail/support-focused web presence that solved unclear product access and slow customer inquiry handling. Improved discoverability of offerings, repair/service trust signals, and faster lead capture for purchase decisions.",
     image: "images/laptopaffairs.png",
-    stacks: ["WordPress", "PHP", "MySQL", "Elementor", "E-commerce", "Responsive Design"]
+    stacks: ["WordPress", "MySQL", "Elementor", "E-commerce", "Responsive Design"]
   },
   {
     title: "Fontcare Pharmacy",
@@ -234,7 +234,7 @@ const projects = [
     description:
       "Built a business calculator tool that solved guesswork in pharmacy profitability planning. Enabled operators to model expenses, break-even targets, and required sales output so decisions become data-backed instead of intuitive.",
     image: "images/rebeca.png",
-    stacks: ["JavaScript", "WordPress", "PHP", "MySQL", "Calculator Logic", "Responsive UI"]
+    stacks: ["ReactJS", "Tailwind CSS", "Calculator Logic", "Responsive UI"]
   }
 ];
 
@@ -253,7 +253,10 @@ const projectButtonColorClasses = [
   "view-color-c",
   "view-color-d",
   "view-color-e",
-  "view-color-f"
+  "view-color-f",
+  "view-color-g",
+  "view-color-h",
+  "view-color-i"
 ];
 
 function App() {
@@ -300,13 +303,13 @@ function App() {
               alt="Profile preview"
               className="h-56 w-full rounded-xl object-cover"
             />
-            <p className="mt-3 text-center text-sm font-semibold text-zinc-800">Tetteh Solomon</p>
+            
           </div>
         </div>
       </header>
 
       <main className="mx-auto max-w-6xl px-4 pb-24 pt-20 md:px-8 md:pb-0">
-        <section id="home" className="mx-1 pt-0 pb-16 md:-mx-8 md:mx-0 md:pb-20">
+        <section id="home" className="mx-1 pt-0 pb-16 md:-mx-8 md:pb-20">
           <div className="hero-shell text-center">
             <img
               src="images/bg-hero.png"
@@ -368,17 +371,43 @@ function App() {
         <div className="section-ticks" />
         <section id="about" className="rounded-3xl bg-white/70 py-16 md:py-24">
           <h2 className="mb-8 text-center text-3xl font-semibold md:text-4xl">ABOUT ME</h2>
-          <p className="mx-auto max-w-4xl text-center leading-8 text-zinc-600">
-            I am a FullStack Software Developer with about 5 years of hands-on experience (started in
-            February 2021), building production-ready web applications with React, Next.js, Tailwind,
-            Node.js/Express, NestJS, PHP, and WordPress, backed by MySQL, MongoDB, PostgreSQL, and Redis.
-            Over the years, I have delivered systems for dashboards, payment routing, live webinar/game
-            experiences, analytics, and practical business workflows. Beyond feature delivery, I design and
-            maintain the underlying architecture: queue-backed workloads using Redis + BullMQ, worker services,
-            migration-safe database workflows, webhook integrations, and server operations with PM2 on Hetzner
-            infrastructure. I am currently growing deeper into AI Engineering, focused on building useful
-            AI-driven products by integrating LLM APIs, workflow automation, and intuitive product UX.
-          </p>
+          <Motion.div
+            className="mx-auto max-w-4xl overflow-hidden rounded-3xl border border-zinc-200/70 bg-white/40 px-6 py-7"
+            // "Monk scroll" unroll: expand height + a bit of 3D curl from the top.
+            initial={{
+              opacity: 1,
+              y: 0,
+              scaleY: 0.08,
+              rotateX: 22,
+              filter: "blur(3px)"
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scaleY: 1,
+              rotateX: 0,
+              filter: "blur(0px)"
+            }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 1.35, ease: "easeInOut" }}
+            style={{
+              transformOrigin: "top",
+              willChange: "transform, filter",
+              perspective: "900px"
+            }}
+          >
+            <p className="text-center leading-8 text-zinc-600">
+              I am a FullStack Software Developer with 5 years of hands-on experience (started in
+              February 2021), building production-ready web applications with React, Next.js, Tailwind,
+              Node.js/Express, NestJS, PHP, and WordPress, backed by MySQL, MongoDB, PostgreSQL, and Redis.
+              Over the years, I have delivered systems for dashboards, payment routing, live webinar/game
+              experiences, analytics, and practical business workflows. Beyond feature delivery, I design and
+              maintain the underlying architecture: queue-backed workloads using Redis + BullMQ, worker services,
+              migration-safe database workflows, webhook integrations, and server operations with PM2 on Hetzner
+              infrastructure. I am currently growing deeper into AI Engineering, focused on building useful
+              AI-driven products by integrating LLM APIs, workflow automation, and intuitive product UX.
+            </p>
+          </Motion.div>
         </section>
 
         <div className="section-ticks" />
@@ -430,7 +459,7 @@ function App() {
         </section>
 
         <div className="section-ticks" />
-        <section id="projects" className="rounded-3xl bg-white/70 py-16 md:py-24">
+        <section id="projects" className="rounded-3xl py-16 md:py-24">
           <h2 className="mb-10 text-center text-3xl font-semibold md:text-4xl">PROJECTS</h2>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, idx) => (
@@ -481,24 +510,24 @@ function App() {
         </section>
 
         <div className="section-ticks" />
-        <section id="contact" className="rounded-3xl bg-zinc-50/80 py-16 md:py-24">
+        <section id="contact" className="rounded-3xl py-16 md:py-24">
           <h2 className="mb-10 text-center text-3xl font-semibold md:text-4xl">Contact Me</h2>
           <div className="grid gap-8 lg:grid-cols-2">
             <form className="elev-card rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
               <input
                 type="text"
                 placeholder="Name"
-                className="w-full rounded-lg border border-zinc-300 bg-white px-4 py-3 text-sm outline-none focus:border-cyan-600"
+                className="w-full rounded-lg border mb-4 border-zinc-300 bg-white px-4 py-3 text-sm outline-none focus:border-cyan-600"
               />
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full rounded-lg border border-zinc-300 bg-white px-4 py-3 text-sm outline-none focus:border-cyan-600"
+                className="w-full rounded-lg border mb-4 border-zinc-300 bg-white px-4 py-3 text-sm outline-none focus:border-cyan-600"
               />
               <textarea
                 rows="6"
                 placeholder="Message"
-                className="w-full rounded-lg border border-zinc-300 bg-white px-4 py-3 text-sm outline-none focus:border-cyan-600"
+                className="w-full rounded-lg border mb-4 border-zinc-300 bg-white px-4 py-3 text-sm outline-none focus:border-cyan-600"
               />
         <button
                 type="submit"
@@ -510,7 +539,6 @@ function App() {
             <div className="elev-card rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
               <h3 className="mb-4 text-xl font-semibold">Reach Me</h3>
               <p className="mb-2 text-zinc-600">+234 81 6290 6023</p>
-              <p className="mb-2 text-zinc-600">+234 80 9871 4507</p>
               <p className="mb-8 text-zinc-600">tettehsolomon106@gmail.com</p>
               <div className="flex gap-3">
                 {[FaFacebookF, FaWhatsapp, FaLinkedinIn, FaGithub].map((Icon, idx) => (
