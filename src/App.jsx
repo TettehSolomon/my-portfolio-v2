@@ -62,14 +62,12 @@ const skills = [
   { label: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500" />, tone: "from-cyan-50 to-sky-100" },
   { label: "TypeScript", icon: <SiTypescript className="text-blue-500" />, tone: "from-blue-50 to-indigo-100" },
   { label: "ReactJS", icon: <FaReact className="text-cyan-500" />, tone: "from-cyan-50 to-teal-100" },
-  { label: "NextJS", icon: <SiNextdotjs className="text-zinc-900" />, tone: "from-zinc-50 to-zinc-200" },
   { label: "React Router", icon: <FaReact className="text-rose-500" />, tone: "from-rose-50 to-pink-100" },
   { label: "Vite", icon: <SiVite className="text-violet-500" />, tone: "from-violet-50 to-fuchsia-100" },
   { label: "NodeJS", icon: <FaNodeJs className="text-green-600" />, tone: "from-green-50 to-emerald-100" },
   { label: "ExpressJS", icon: <SiExpress className="text-zinc-700" />, tone: "from-zinc-50 to-slate-200" },
   { label: "PHP", icon: <FaPhp className="text-indigo-500" />, tone: "from-indigo-50 to-blue-100" },
   { label: "Python", icon: <SiPython className="text-blue-500" />, tone: "from-blue-50 to-yellow-100" },
-  { label: "NestJS", icon: <SiNestjs className="text-rose-600" />, tone: "from-rose-50 to-red-100" },
   { label: "MongoDB", icon: <SiMongodb className="text-green-600" />, tone: "from-lime-50 to-green-100" },
   { label: "MySQL", icon: <SiMysql className="text-blue-500" />, tone: "from-sky-50 to-cyan-100" },
   { label: "PostgreSQL", icon: <SiPostgresql className="text-indigo-500" />, tone: "from-indigo-50 to-sky-100" },
@@ -513,20 +511,32 @@ function App() {
         <section id="contact" className="rounded-3xl py-16 md:py-24">
           <h2 className="mb-10 text-center text-3xl font-semibold md:text-4xl">Contact Me</h2>
           <div className="grid gap-8 lg:grid-cols-2">
-            <form className="elev-card rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+            <form
+              className="elev-card rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm"
+              action="https://formspree.io/f/xyknqrka"
+              method="POST"
+            >
               <input
                 type="text"
+                name="name"
                 placeholder="Name"
+                autoComplete="name"
+                required
                 className="w-full rounded-lg border mb-4 border-zinc-300 bg-white px-4 py-3 text-sm outline-none focus:border-cyan-600"
               />
               <input
                 type="email"
+                name="email"
                 placeholder="Email"
+                autoComplete="email"
+                required
                 className="w-full rounded-lg border mb-4 border-zinc-300 bg-white px-4 py-3 text-sm outline-none focus:border-cyan-600"
               />
               <textarea
                 rows="6"
+                name="message"
                 placeholder="Message"
+                required
                 className="w-full rounded-lg border mb-4 border-zinc-300 bg-white px-4 py-3 text-sm outline-none focus:border-cyan-600"
               />
         <button

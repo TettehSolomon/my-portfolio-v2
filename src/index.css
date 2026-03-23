@@ -304,7 +304,7 @@ body::before {
   height: 48px;
   border-radius: 999px;
   border: none;
-  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  background: linear-gradient(135deg, #0092B9);
   color: white;
   display: grid;
   place-items: center;
