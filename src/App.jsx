@@ -168,7 +168,7 @@ const projects = [
     description:
       "Built a central conference platform that solved fragmented event communication, manual registration stress, and poor attendee engagement. Unified registration, payment routing, live webinar/game experiences, and admin tools into one scalable flow.",
     image: "images/thepanel.png",
-    stacks: ["ReactJS", "Tailwind CSS", "React Router", "Vite", "ExpressJS", "MySQL", "Sequelize", "JWT"]
+    stacks: ["ReactJS", "Tailwind CSS", "React Router", "Vite", "ExpressJS", "MySQL", "Paystack"]
   },
   {
     title: "UltimateYP",
@@ -176,7 +176,7 @@ const projects = [
     description:
       "Created an interactive platform that solved low audience participation during live sessions. Enabled real-time quizzes, polls, raffles, Zoom-linked engagement, and leaderboard mechanics that drive retention, competition, and measurable activity.",
     image: "images/ultimateyp.png",
-    stacks: ["ReactJS", "Tailwind CSS", "Vite", "Framer Motion", "ExpressJS", "MySQL", "Sequelize", "Redis"]
+    stacks: ["ReactJS", "Tailwind CSS", "ExpressJS", "MySQL", "Redis"]
   },
   {
     title: "Pharmacademy",
@@ -291,9 +291,8 @@ function App() {
           </button>
         </div>
         <div
-          className={`overflow-hidden border-t border-zinc-200 bg-white px-4 transition-all duration-300 lg:hidden ${
-            isMenuOpen ? "max-h-72 py-4" : "max-h-0 py-0"
-          }`}
+          className={`overflow-hidden border-t border-zinc-200 bg-white px-4 transition-all duration-300 lg:hidden ${isMenuOpen ? "max-h-72 py-4" : "max-h-0 py-0"
+            }`}
         >
           <div className="mx-auto w-full max-w-xs rounded-2xl border border-zinc-200 bg-zinc-50 p-8 shadow-sm">
             <img
@@ -301,7 +300,7 @@ function App() {
               alt="Profile preview"
               className="h-56 w-full rounded-xl object-cover"
             />
-            
+
           </div>
         </div>
       </header>
@@ -466,45 +465,45 @@ function App() {
                 const buttonColorClass = projectButtonColorClasses[idx % projectButtonColorClasses.length];
 
                 return (
-              <Motion.article
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: idx * 0.03 }}
-                className={`project-card elev-card ${radiusClass} overflow-hidden border border-zinc-200 bg-white shadow-sm`}
-              >
-                <img src={project.image} alt={project.title} className="h-44 w-full object-cover transition duration-500 hover:scale-105" loading="lazy" />
-                <div className="project-box-inner">
-                  <h3 className="mb-2 text-xl font-semibold">{project.title}</h3>
-                  <p className="project-desc mb-4 text-sm text-zinc-600">{project.description}</p>
-                  {project.stacks && (
-                    <div className="mb-4 flex flex-wrap gap-2">
-                      {project.stacks.slice(0, 6).map((stack) => (
-                        <span
-                          key={stack}
-                          className="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs font-medium text-zinc-700"
+                  <Motion.article
+                    key={project.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.35, delay: idx * 0.03 }}
+                    className={`project-card elev-card ${radiusClass} overflow-hidden border border-zinc-200 bg-white shadow-sm`}
+                  >
+                    <img src={project.image} alt={project.title} className="h-44 w-full object-cover transition duration-500 hover:scale-105" loading="lazy" />
+                    <div className="project-box-inner">
+                      <h3 className="mb-2 text-xl font-semibold">{project.title}</h3>
+                      <p className="project-desc mb-4 text-sm text-zinc-600">{project.description}</p>
+                      {project.stacks && (
+                        <div className="mb-4 flex flex-wrap gap-2">
+                          {project.stacks.map((stack) => (
+                            <span
+                              key={stack}
+                              className="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs font-medium text-zinc-700"
+                            >
+                              {stack}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                      <div className="text-center">
+                        <button
+                          type="button"
+                          onClick={() => setSelectedProject(project)}
+                          className={`project-view-btn ${radiusClass} ${buttonColorClass} inline-block px-5 py-2 text-sm font-semibold text-white transition`}
                         >
-                          {stack}
-                        </span>
-                      ))}
+                          View
+                        </button>
+                      </div>
                     </div>
-                  )}
-                  <div className="text-center">
-                    <button
-                      type="button"
-                      onClick={() => setSelectedProject(project)}
-                      className={`project-view-btn ${radiusClass} ${buttonColorClass} inline-block px-5 py-2 text-sm font-semibold text-white transition`}
-                    >
-                      View
-                    </button>
-                  </div>
-                </div>
-              </Motion.article>
+                  </Motion.article>
                 );
               })()
             ))}
-        </div>
+          </div>
         </section>
 
         <div className="section-ticks" />
@@ -539,12 +538,12 @@ function App() {
                 required
                 className="w-full rounded-lg border mb-4 border-zinc-300 bg-white px-4 py-3 text-sm outline-none focus:border-cyan-600"
               />
-        <button
+              <button
                 type="submit"
                 className="rounded-full bg-cyan-600 px-7 py-3 text-sm font-semibold text-white hover:bg-cyan-700"
-        >
+              >
                 Submit
-        </button>
+              </button>
             </form>
             <div className="elev-card rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
               <h3 className="mb-4 text-xl font-semibold">Reach Me</h3>
@@ -567,7 +566,7 @@ function App() {
 
       </main>
 
-     
+
 
       <section className="border-t border-zinc-200 bg-white/70 py-10 backdrop-blur-sm">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 text-center sm:grid-cols-2 lg:grid-cols-4 lg:text-left md:px-8">
@@ -679,7 +678,7 @@ function App() {
           <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
         )}
       </AnimatePresence>
-        </div>
+    </div>
   );
 }
 
