@@ -212,7 +212,7 @@ const projects = [
   },
   {
     title: "Laptop Affairs",
-    link: "https://laptopaffairs.com.ng",
+    link: "https://laptopaffairs.com",
     description:
       "Built a retail/support-focused web presence that solved unclear product access and slow customer inquiry handling. Improved discoverability of offerings, repair/service trust signals, and faster lead capture for purchase decisions.",
     image: "images/laptopaffairs.png",
