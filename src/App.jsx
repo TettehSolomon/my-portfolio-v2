@@ -219,12 +219,12 @@ const projects = [
     stacks: ["WordPress", "MySQL", "Elementor", "E-commerce", "Responsive Design"]
   },
   {
-    title: "Fontcare Pharmacy",
-    link: "https://fontcarepharmacy.com.ng",
+    title: "Dream To Degrees",
+    link: "https://dreamtodegreesfoundation.com",
     description:
-      "Created a community pharmacy experience that solved limited digital access to trusted pharmaceutical guidance. Made services, consultation touchpoints, and care information easier to reach for both local and online customers.",
-    image: "images/fontcare.png",
-    stacks: ["WordPress", "PHP", "MySQL", "Elementor", "Custom CSS", "SEO"]
+      "Designed a nonprofit platform to help students access scholarships and mentorship opportunities. Improved discoverability of programs, structured application flow, and clear impact communication to increase engagement and support.",
+    image: "images/dreamtodegrees.png",
+    stacks: ["ReactJS", "Tailwind CSS", "Vite", "Responsive Design"]
   },
   {
     title: "Rebeca",
